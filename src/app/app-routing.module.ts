@@ -15,10 +15,7 @@ const routes: Routes = [
     path: 'about',
     component: AboutComponent  
   },
-  {
-    path: 'navigation',
-    component: NavigationComponent
-  }
+  
 ];
 
 export const AppRoutingModule = RouterModule.forRoot(routes);
