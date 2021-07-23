@@ -10,7 +10,7 @@ const routes: Routes = [
     component: ListComponent,  
   },
   {
-    path: 'user/:id',
+    path: 'user/detail/:id',
     component: DetailComponent  
   },
   
