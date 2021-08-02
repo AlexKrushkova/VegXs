@@ -15,7 +15,10 @@ const routes: Routes = [
   {
     path: 'about',
     canActivate: [AccessGuard],
-    component: AboutComponent  
+    component: AboutComponent,
+    data: {
+      isLogged: true
+    }
   },
   
 ];

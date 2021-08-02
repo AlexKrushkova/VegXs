@@ -13,11 +13,19 @@ export class AccessGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-    const result = false;
-    if(!result){
-      this.router.navigate(['/']);
-    }
-    return result;
+   
+    // const isUserLogged = this.authService.isLogged;
+    // const routerIsLogged = next.data.isLogged;
+
+    // const result = routerIsLogged ? isUserLogged : true;
+
+    // if(!result){
+    //   this.router.navigateByUrl(this.router.url === 'about' ? '/' : this.router.url);
+    // }
+    // return result;
+    return true;
   }
+
+
   
 }
