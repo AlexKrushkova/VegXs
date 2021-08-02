@@ -10,6 +10,7 @@ import { CoreModule } from './core/core.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SharedModule } from './shared/shared.module';
 import { UserModule } from './user/user.module';
+import { AccessGuard }from './guards/access.guard';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { UserModule } from './user/user.module';
     UserModule,
     HttpClientModule, 
   ],
-  providers: [],
+  providers: [
+    AccessGuard,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
