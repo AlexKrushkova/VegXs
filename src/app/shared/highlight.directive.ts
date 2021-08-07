@@ -7,7 +7,7 @@ export class HighlightDirective implements OnChanges {
   
   @Input() color = 'green';
 
-  @Input() isHighlighted = false;
+  @Input() appHighlight = false;
 
   constructor(
     private render: Renderer2, //Ivy
@@ -18,7 +18,7 @@ export class HighlightDirective implements OnChanges {
     highlight(){
       this.render.setStyle(this.elementRef.nativeElement,
         'backgroundColor',
-        this.isHighlighted ? this.color : 'inherit')
+        this.appHighlight ? this.color : 'inherit')
     };
 
     ngOnChanges(): void{

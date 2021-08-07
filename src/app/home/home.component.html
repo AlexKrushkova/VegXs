@@ -1,5 +1,5 @@
 <!-- <app-navigation></app-navigation> -->
-{{isHighlighted}}
-<p appHighlight [isHighlighted] ="isHighlighted">SOME TEXT</p>
+<div *ngIf="isHighlighted"> IS HIGHLIGHTED! </div>
+<p [appHighlight] ="isHighlighted" color="red">SOME TEXT</p>
 <button (click)="toggleHighlightHandler()">Toggle Highlight</button>
 <app-header></app-header>
