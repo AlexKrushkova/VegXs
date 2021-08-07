@@ -7,7 +7,7 @@ import { interval, Subscription } from 'rxjs';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnDestroy {
-
+  isHighlighted = false;
   counter = 0;
 
   intervalSubscription: Subscription;
@@ -22,4 +22,7 @@ export class HomeComponent implements OnDestroy {
   this.intervalSubscription.unsubscribe();
   }
 
+  toggleHighlightHandler(){
+    this.isHighlighted = !this.isHighlighted;
+  }
 }
