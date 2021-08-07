@@ -1,5 +1,6 @@
 <!-- <app-navigation></app-navigation> -->
-<div *ngIf="isHighlighted"> IS HIGHLIGHTED! </div>
+<ng-template #elseTemplate>IS NOT HIGHLIGHTED</ng-template>
+<div *ngIf="isHighlighted; else elseTemplate"> IS HIGHLIGHTED! </div>
 
 <p [appHighlight] ="isHighlighted" color="red">SOME TEXT</p>
 <button (click)="toggleHighlightHandler()">Toggle Highlight</button>
