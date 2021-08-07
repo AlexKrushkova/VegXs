@@ -1,5 +1,5 @@
 <!-- <app-navigation></app-navigation> -->
 {{isHighlighted}}
-<p>SOME TEXT</p>
+<p appHighlight [isHighlighted] ="isHighlighted">SOME TEXT</p>
 <button (click)="toggleHighlightHandler()">Toggle Highlight</button>
 <app-header></app-header>
