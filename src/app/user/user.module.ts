@@ -5,17 +5,19 @@ import { DetailComponent } from './detail/detail.component';
 import { UserRoutingModule } from './user-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { LoginComponent } from './login/login.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 
 
 
 @NgModule({
-  declarations: [ListComponent, DetailComponent, LoginComponent],
+  declarations: [ListComponent, DetailComponent, LoginComponent, RegisterComponent],
   imports: [
     CommonModule,
     UserRoutingModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class UserModule { }
