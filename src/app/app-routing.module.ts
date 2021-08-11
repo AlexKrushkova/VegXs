@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { NavigationComponent } from './core/navigation/navigation.component';
 import { AccessGuard } from './guards/access.guard';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './user/login/login.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,12 @@ const routes: Routes = [
       isLogged: true
     }
   },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  
+    
   
 ];
 

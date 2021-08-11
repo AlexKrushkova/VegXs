@@ -26,6 +26,7 @@ import { AccessGuard }from './guards/access.guard';
     SharedModule,
     UserModule,
     HttpClientModule, 
+    UserModule
   ],
   providers: [
     AccessGuard,
