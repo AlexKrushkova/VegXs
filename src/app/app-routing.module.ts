@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { NavigationComponent } from './core/navigation/navigation.component';
 import { AccessGuard } from './guards/access.guard';
 import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { LoginComponent } from './user/login/login.component';
 import { RegisterComponent } from './user/register/register.component';
 
@@ -31,6 +32,10 @@ const routes: Routes = [
     path: 'register',
     component: RegisterComponent
   },
+  {
+    path: '**',
+    component: NotFoundComponent
+  }
   
   
 ];

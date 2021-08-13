@@ -1,26 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Subscription } from 'rxjs';
+// import { sameValueValidateFactory } from '../same-value-validate-fn';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent implements OnDestroy {
 
   form: FormGroup;
 
+  subscription!: Subscription;
+
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
-      email: ['test@email.bg', [Validators.required, Validators.email],[]],
-      password: ['test-password, [Validators.required, Validators.email]']
-    })
-   }
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      // repeatPassword: ['']
+    });
 
-  ngOnInit(): void {
+    // const sameValueValidate = sameValueValidateFactory('repeatPassword', this.form.get('password')!, 'password');
+
+    this.subscription = this.form.get('password')!.valueChanges!.subscribe(() => {
+      this.form.controls.repeatPassword.updateValueAndValidity({ onlySelf: true });
+    });
+
+    // this.form.controls.repeatPassword.setValidators([Validators.required, Validators.minLength(6)])
   }
 
-  registerHandler(){
-
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe()
   }
 }
