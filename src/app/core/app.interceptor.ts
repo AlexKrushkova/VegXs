@@ -12,9 +12,16 @@ export class AppInterceptor implements HttpInterceptor{
        if(!req.url.includes('http')){
            req = req.clone({
                url: `${apiURL}${req.url}`
-           })
+           });
        }
-       
+    //    if (req.url.includes(apiURL)){
+    //        const setHeaders = {};
+
+    //        req = req.clone({
+    //            withCredentials: true,
+    //            }
+    //        )}
+          
         return next.handle(req);
     }
 }
