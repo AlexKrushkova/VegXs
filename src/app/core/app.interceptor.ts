@@ -1,8 +1,9 @@
 import { Injectable, Provider } from "@angular/core";
-import { HTTP_INTERCEPTORS, HttpInterceptor, HttpEvent, HttpHandler, HttpRequest } from "@angular/common/http";
-import { Observable } from "rxjs";
+import { HTTP_INTERCEPTORS, HttpInterceptor, HttpEvent, HttpHandler, HttpRequest, HttpResponse } from "@angular/common/http";
+import { Observable, of } from "rxjs";
 import  { environment } from "../../environments/environment";
 const apiURL = environment.apiURL;
+import { map, filter, catchError } from "rxjs/operators";
 
 @Injectable()
 export class AppInterceptor implements HttpInterceptor{
@@ -22,7 +23,18 @@ export class AppInterceptor implements HttpInterceptor{
     //            }
     //        )}
           
-        return next.handle(req);
+        return next.handle(req).pipe(
+            map(e => {
+                if (e instanceof HttpResponse && e.url.includes('login')){
+                    const authToken = e.headers.get('Authentication');
+                }
+                return e;
+            }),
+            catchError(err=>{
+                console.log(err);
+                return of(err);
+            })
+        );
     }
 }
 export const appInterceptorProvider: Provider = {
