@@ -1,3 +1,4 @@
+import { CurrencyPipe } from '@angular/common';
 import { Component, OnDestroy } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 
@@ -7,6 +8,7 @@ import { interval, Subscription } from 'rxjs';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnDestroy {
+
   isHighlighted = false;
   counter = 0;
 
