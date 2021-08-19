@@ -11,6 +11,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { SharedModule } from './shared/shared.module';
 import { UserModule } from './user/user.module';
 import { AccessGuard }from './guards/access.guard';
+import {AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 @NgModule({
   declarations: [
@@ -26,7 +32,11 @@ import { AccessGuard }from './guards/access.guard';
     SharedModule,
     UserModule,
     HttpClientModule, 
-    UserModule
+    UserModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig, 'VegExcess'),
+    AngularFirestoreModule, 
+    AngularFireAuthModule,
+    AngularFireStorageModule,
   ],
   providers: [
     AccessGuard,
