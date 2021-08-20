@@ -1,3 +1,13 @@
+Welcome to VegExcess where vegetable producers/local farmers can post their excessive produce for the general public to contact them and buy. 
+You would be able to log in/ register/ sign up.
+
+The logged in user has the option to create a produce offer with details, edit it and delete it.
+The not logged-in user can only see details of the offer and contact the owner.
+
+I am using Firebase as a database and will be using firebase hosting as soon as my project is finished.
+
+
+
 # VegExcess
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
