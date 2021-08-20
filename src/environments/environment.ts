@@ -15,6 +15,7 @@ export const environment = {
     appId: "1:977141622489:web:fda1b9574af727c10e40c8",
     measurementId: "G-KTMTZ45J1Z"
   },
+  firebaseAPIKey: "AIzaSyAE9rXfgetaO5WLhJeayPb3FGdZp848Aec",
 };
 
 /*

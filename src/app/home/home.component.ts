@@ -1,30 +1,16 @@
-import { CurrencyPipe } from '@angular/common';
 import { Component, OnDestroy } from '@angular/core';
-import { interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnDestroy {
+export class HomeComponent {
 
-  isHighlighted = false;
-  counter = 0;
+  
+  constructor() { }
 
-  intervalSubscription: Subscription;
-
-  constructor() { 
-    interval(1000).subscribe(()=> {
-      this.counter++;
-    });
+  ngOnInit(): void {
   }
 
-  ngOnDestroy(): void {
-  this.intervalSubscription.unsubscribe();
-  }
-
-  toggleHighlightHandler(){
-    this.isHighlighted = !this.isHighlighted;
-  }
 }

@@ -1,43 +1,35 @@
-// import { NgModule } from '@angular/core';
-import { Component } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { AboutComponent } from './about/about.component';
-import { AccessGuard } from './guards/access.guard';
-import { HomeComponent } from './home/home.component';
+import { NgModule } from '@angular/core';
+
+import { Routes, RouterModule, PreloadAllModules  } from '@angular/router';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { LoginComponent } from './user/login/login.component';
-import { RegisterComponent } from './user/register/register.component';
 
 const routes: Routes = [
   {
     path: '',
+    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
     pathMatch: 'full',
-    component: HomeComponent  
+  },
+  // {
+  //   path: '**',
+  //   component: NotFoundComponent
+  // },
+  {
+    path: 'contact',
+    loadChildren: () =>
+      import('./contact/contact.module').then((m) => m.ContactModule),
   },
   {
-    path: 'about',
-    canActivate: [AccessGuard],
-    component: AboutComponent,
-    data: {
-      isLogged: true
-    }
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
-  {
-    path: 'login',
-    component: LoginComponent
-  },
-
-  {
-    path: 'register',
-    component: RegisterComponent
-  },
-  {
-    path: '**',
-    component: NotFoundComponent
-  }
-  
   
 ];
 
-export const AppRoutingModule = RouterModule.forRoot(routes);
+@NgModule({
+  imports: [
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules, relativeLinkResolution: 'legacy' }),
+  ],
+  exports: [RouterModule],
+})
+export class AppRoutingModule {}
 
