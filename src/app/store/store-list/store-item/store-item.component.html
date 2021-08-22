@@ -1,0 +1,43 @@
+<!-- ? Product -->
+<div class="card">
+  <img
+    [src]="product.imagePath"
+    alt="Responsive Image"
+    height="350"
+    class="card-img-top"
+  />
+  <div class="card-body text-center">
+    <h4
+      class="card-title"
+      style="font-weight: 550; font-size: large; color: #343a40"
+    >
+      {{ product.name }}
+    </h4>
+
+    <p class="card-text">{{ product.kind }}</p>
+
+    <p class="lead font-weight-bold">{{ product.price }}$</p>
+
+    <a *ngIf="!isAuth" (click)="onOrder()" class="btn btn-secondary m-2"
+      >Order now</a
+    >
+    <a
+      [routerLink]="[index, 'details']"
+      *ngIf="!isAuth"
+      class="btn btn-dark"
+      (click)="onDetails()"
+      >Details
+    </a>
+    <a
+      [routerLink]="[index, 'edit']"
+      *ngIf="isAuth"
+      class="btn btn-dark m-2"
+      (click)="onEdit()"
+      >Edit Product
+    </a>
+    <a *ngIf="isAuth" class="btn btn-danger" (click)="onDeleteProduct()"
+      >Delete Product</a
+    >
+  </div>
+</div>
+<!-- ? Product -->

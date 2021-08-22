@@ -1,20 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoaderComponent } from './loader/loader.component';
+
 import { HighlightDirective } from './highlight.directive';
+import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 
 
 
 @NgModule({
   declarations: [
-    LoaderComponent,
-    HighlightDirective
+
+    HighlightDirective,
+
+    LoadingSpinnerComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    LoaderComponent,
     HighlightDirective
   ]
 })

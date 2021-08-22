@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { SharedModule } from './shared/shared.module';
-import { AccessGuard }from './guards/access.guard';
 import { environment } from 'src/environments/environment';
 
 import { AngularFireModule } from '@angular/fire';
@@ -34,7 +33,6 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     AngularFireStorageModule,
   ],
   providers: [
-    AccessGuard,
   ],
   bootstrap: [AppComponent]
 })

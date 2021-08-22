@@ -1,0 +1,18 @@
+<!-- ? Iterate over the product array -->
+<app-store-item
+  class="col-md-4 padding"
+  *ngFor="let productEl of product; let i = index"
+  [product]="productEl"
+  [index]="i"
+></app-store-item>
+
+<!-- ? Out of stock alert-->
+<div *ngIf="product.length == 0">
+  <p
+    class="display-4 text-center"
+    style="padding-top: 6rem; padding-bottom: 6rem"
+  >
+    Unfortunately we are out of stock. Please check back later or give us a call
+    for more information.
+  </p>
+</div>

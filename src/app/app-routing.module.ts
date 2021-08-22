@@ -1,7 +1,5 @@
 import { NgModule } from '@angular/core';
-
-import { Routes, RouterModule, PreloadAllModules  } from '@angular/router';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 const routes: Routes = [
   {
@@ -9,10 +7,11 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
     pathMatch: 'full',
   },
-  // {
-  //   path: '**',
-  //   component: NotFoundComponent
-  // },
+  {
+    path: 'store',
+    loadChildren: () =>
+      import('./store/store.module').then((m) => m.StoreModule),
+  },
   {
     path: 'contact',
     loadChildren: () =>
@@ -22,7 +21,6 @@ const routes: Routes = [
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   },
-  
 ];
 
 @NgModule({
@@ -32,4 +30,3 @@ const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-

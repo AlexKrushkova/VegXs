@@ -1,9 +1,56 @@
-<header>
-
-<nav>
-    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
-    <a routerLink="/about" routerLinkActive="active" >About</a>
-    <a routerLink="/contact" routerLinkActive="active" >Contact</a>
-</nav>
-
-</header>
+<!-- ? Navbar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="nav-link" class="navbar-brand">
+        <img src="../../assets/coffee-mug.png" alt="" srcset="" />
+      </a>
+  
+      <!-- ? Dropdown responsive button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarResponsive"
+        aria-controls="navbarResponsive"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- ? Links -->
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="store">Store</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="contact">Contact Us</a>
+          </li>
+        </ul>
+  
+        <!-- ? Auth dependend links -->
+        <ul class="navbar-nav">
+          <li *ngIf="isAuth" class="nav-item ml-auto">
+            <a class="nav-link">Welcome: {{ currentUser.email }} </a>
+          </li>
+          <li *ngIf="isAuth" class="nav-item ml-auto">
+            <a (click)="onAdd()" class="nav-link">Add Product</a
+            >
+          </li>
+          <li *ngIf="!isAuth" class="nav-item ml-auto">
+            <a routerLink="auth" class="nav-link">Login/SignUp</a>
+          </li>
+  
+          <li *ngIf="isAuth" class="nav-item ml-auto">
+            <a (click)="onLogout()" style="cursor: pointer" class="nav-link"
+              >Logout</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
