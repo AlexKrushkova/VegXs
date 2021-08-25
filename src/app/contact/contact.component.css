@@ -1,6 +1,9 @@
 form {
     transform: translateX(50%);
   }
-  agm-map {
-    height: 300px;
-  }
+
+  .my-google-map {
+    width: 90%;
+    height: 90%;
+    }
+  

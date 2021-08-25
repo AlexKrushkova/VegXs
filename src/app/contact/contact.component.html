@@ -61,8 +61,14 @@
   
   <div class="container text-center">
     <h1 class="display-4">Visit our store</h1>
+
+
+
+    <div class="my-google-map">
+      <google-map [options]="mapOptions">
+        <map-marker [position]="marker.position"></map-marker>
+      </google-map>
+    </div>
   </div>
-<!--   
-  <agm-map [latitude]="lat" [longitude]="lng">
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-  </agm-map> -->
+
+

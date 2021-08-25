@@ -1,11 +1,13 @@
-  
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ContactComponent } from './contact.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactRouterModule } from './contact-router.module';
-// import { AgmCoreModule } from '@agm/core';
+import { GoogleMapsModule } from '@angular/google-maps'
+
+// import { AgmCoreModule, AgmMap, AgmMarker } from '@agm/core';
+
 
 @NgModule({
   declarations: [ContactComponent],
@@ -14,11 +16,16 @@ import { ContactRouterModule } from './contact-router.module';
     ContactRouterModule,
     RouterModule,
     ReactiveFormsModule,
+    GoogleMapsModule 
+  
 
     // AgmCoreModule.forRoot({
-    //   apiKey: 'AIzaSyDGiysWx8FDoZin3qrhqGGH77P7otY4Blo',
+    //   apiKey: 'AIzaSyAE9rXfgetaO5WLhJeayPb3FGdZp848Aec',
     // }),
   ],
+
+  
+//   schemas:  [ CUSTOM_ELEMENTS_SCHEMA ]
   
 })
 export class ContactModule {}
