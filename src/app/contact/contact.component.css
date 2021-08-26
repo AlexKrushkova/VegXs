@@ -2,8 +2,17 @@ form {
     transform: translateX(50%);
   }
 
-  .my-google-map {
-    width: 90%;
-    height: 90%;
-    }
-  
+  /* .my-google-map {
+    width: 95%;
+    height: 95%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: auto;
+  }
+   */
+   
+   agm-map {
+     margin-top: 20px;
+  height: 500px;
+  width: 100%;
+}

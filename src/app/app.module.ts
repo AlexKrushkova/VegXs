@@ -14,6 +14,7 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AgmCoreModule } from '@agm/core';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
     AngularFirestoreModule, 
     AngularFireAuthModule,
     AngularFireStorageModule,
+    AgmCoreModule
   ],
   providers: [
   ],

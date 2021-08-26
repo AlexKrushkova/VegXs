@@ -15,13 +15,6 @@ export class AppInterceptor implements HttpInterceptor{
                url: `${apiURL}${req.url}`
            });
        }
-    //    if (req.url.includes(apiURL)){
-    //        const setHeaders = {};
-
-    //        req = req.clone({
-    //            withCredentials: true,
-    //            }
-    //        )}
           
         return next.handle(req).pipe(
             map(e => {

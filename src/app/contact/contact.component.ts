@@ -2,7 +2,6 @@ import { Component, OnInit} from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 
-
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -12,13 +11,9 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class ContactComponent implements OnInit {
   constructor() {}
 
-  mapOptions: google.maps.MapOptions = {
-    center: { lat: 57.046707, lng: 9.935932 },
-    zoom : 14, 
- }
- marker = {
-    position: { lat: 57.046707, lng: 9.935932 },
- }
+  lat = 57.046707;
+  lng = 9.935932;
+
 
   //? Form
   contactForm: FormGroup;
