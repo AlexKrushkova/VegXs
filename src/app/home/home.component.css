@@ -32,8 +32,10 @@
   .jumbotron {
     padding: 1rem;
     border-radius: 0;
+    width: 1916px;
+
   }
-  
+
   .padding {
     padding-bottom: 2rem;
   }
