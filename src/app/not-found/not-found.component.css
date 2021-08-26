@@ -1,6 +1,6 @@
 .mainbox {
     margin: auto;
-    height: 550px;
+    height: 800px;
     width: 550px;
     position: relative;
   }
@@ -14,13 +14,6 @@
       top: 8%;
     }
   
-  .far {
-    position: absolute;
-    font-size: 8.5rem;
-    left: 42%;
-    top: 15%;
-    color: #95c2de;
-  }
   
    .err2 {
       color: #95c2de;
@@ -48,4 +41,9 @@
   
   a:hover {
     text-decoration: underline;
+  }
+
+  footer::important{
+      padding-bottom: 0px;
+      margin-bottom: 0px;
   }
