@@ -1,37 +1,24 @@
-Welcome to VegExcess where vegetable producers/local farmers can post their excessive produce for the general public to contact them and buy. 
-You would be able to log in/ register/ sign up.
+# VeggieExcess description:
+* This is a pretty simple web application created for local farmers to sell and buy organic produce. It contains home page with introduction and information about the website, Store page where you can see the produce including add/edit/delete if logged in and buy/details if a guest. Add page and Contact us page.
 
-The logged in user has the option to create a produce offer with details, edit it and delete it.
-The not logged-in user can only see details of the offer and contact the owner.
+* Google Firebase authentication is supported via Email/Password and logged in users have access to the Edit page for each product.
 
-I am using Firebase as a database and will be using firebase hosting as soon as my project is finished.
+* All information is stored on Google's Firebase.
+* The website is also deployed on Firebase.
+* All images are uploaded and used from Google Cloud storage.
 
+# Technologies used:
+--Frontend:
+* Angular 11
+* Bootstrap 4.5
+* CSS
+* jQuery
+* Google Maps
 
+-- Backend:
+* Firebase Realtime Database
+* Firebase Authentication
 
-# VegExcess
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.2.0.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+# Additional information:
+This app is deployed to Firebase and can be accessed with the following URL: 
+Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
