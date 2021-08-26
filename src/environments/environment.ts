@@ -16,6 +16,8 @@ export const environment = {
     measurementId: "G-KTMTZ45J1Z"
   },
   firebaseAPIKey: "AIzaSyAE9rXfgetaO5WLhJeayPb3FGdZp848Aec",
+
+  GoogleMapsApiKey: 'AIzaSyCpYPGwslrKlApzx397NNdV8_nN-CGz2LY'
 };
 
 /*

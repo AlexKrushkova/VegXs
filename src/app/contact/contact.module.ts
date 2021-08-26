@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ContactRouterModule } from './contact-router.module';
 import { AgmCoreModule } from '@agm/core';
+import { environment } from 'src/environments/environment';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { AgmCoreModule } from '@agm/core';
 
     AgmCoreModule
     .forRoot({
-      apiKey: 'AIzaSyCpYPGwslrKlApzx397NNdV8_nN-CGz2LY',
+      apiKey: 'GoogleMapsApiKey',
     }),
   ],
 
