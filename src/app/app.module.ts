@@ -31,7 +31,9 @@ import { AgmCoreModule } from '@agm/core';
     AngularFirestoreModule, 
     AngularFireAuthModule,
     AngularFireStorageModule,
-    AgmCoreModule
+    AgmCoreModule,
+    
+    
   ],
   providers: [
   ],
