@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { ResponseData, AuthService } from './auth.service';
+import { AuthRecponseData, AuthService } from './auth.service';
 
 @Component({
   selector: 'app-auth',
@@ -40,7 +40,7 @@ export class AuthComponent implements OnInit {
     this.isLoading = true;
 
     // ? Observable which will in the end expect the response data fom the auth service.
-    let authObs: Observable<ResponseData>;
+    let authObs: Observable<AuthRecponseData>;
 
     // ? Depending on the login status on the front end we either sign up or login to an existing account, parts of the error message is handled here as well.
     if (!this.isLoginMode) {

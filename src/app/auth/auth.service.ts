@@ -7,7 +7,7 @@ import { environment } from 'src/environments/environment';
 import { User } from './user.model';
 
 // ? Define what data will be returned from Firebase upon login or sign up.
-export interface ResponseData {
+export interface AuthRecponseData {
   kind: string;
   idToken: string;
   email: string;
@@ -31,7 +31,7 @@ export class AuthService {
   // * Sign up a user
   signup(email: string, password: string) {
     return this.http
-      .post<ResponseData>(
+      .post<AuthRecponseData>(
         'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' +
           environment.firebaseAPIKey,
         {
@@ -56,8 +56,8 @@ export class AuthService {
   // * Login a user
   login(email: string, password: string) {
     return this.http
-      .post<ResponseData>(
-        'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=' +
+      .post<AuthRecponseData>(
+        'https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=' +
           environment.firebaseAPIKey,
         {
           email: email,
@@ -136,7 +136,7 @@ export class AuthService {
     }
   }
 
-  // * Handle logged in user/
+  // * Hangle logged in user/
   private handleAuthentication(
     email: string,
     userId: string,
