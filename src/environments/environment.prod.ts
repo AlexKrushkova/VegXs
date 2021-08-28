@@ -1,5 +1,5 @@
 export const environment = {
-  production: false,
+  production: true,
   apiURL : `https://jsonplaceholder.typicode.com`,
   firebaseConfig: {
     apiKey: "AIzaSyAE9rXfgetaO5WLhJeayPb3FGdZp848Aec",

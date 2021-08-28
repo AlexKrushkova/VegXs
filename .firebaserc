@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "vegexcess": {
+      "hosting": {
+        "VegExcess": [
+          "vegexcess"
+        ]
+      }
+    }
+  }
+}

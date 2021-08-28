@@ -15,7 +15,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AgmCoreModule } from '@agm/core';
-
+import { AngularFireDatabaseModule } from '@angular/fire/database';
 
 @NgModule({
   declarations: [
@@ -27,10 +27,11 @@ import { AgmCoreModule } from '@agm/core';
     CoreModule,
     SharedModule,
     HttpClientModule,  
-    AngularFireModule.initializeApp(environment.firebaseConfig, 'VegExcess'),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, 
     AngularFireAuthModule,
     AngularFireStorageModule,
+    AngularFireDatabaseModule,
     AgmCoreModule,
     
     
