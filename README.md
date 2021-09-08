@@ -13,7 +13,7 @@
 * Bootstrap 4.5
 * CSS
 * jQuery
-* Google Maps
+* Google Maps API
 
 -- Backend:
 * Firebase Realtime Database
