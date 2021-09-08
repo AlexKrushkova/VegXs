@@ -20,5 +20,5 @@
 * Firebase Authentication
 
 # Additional information:
-This app is deployed to Firebase and can be accessed with the following URL: 
+This app is deployed to Firebase and can be accessed with the following URL: https://vegexcess.web.app/
 Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
